@@ -16,7 +16,7 @@ public class Main {
             list.add(nums2[j]);
         }
 
-        int[] nums3 = list.stream().sorted().mapToInt(Integer :: intValue).toArray();
+        int[] nums3 = list.stream().sorted().mapToInt(Integer :: intValue).toArray(); //Applied Stream API here
         System.arraycopy(nums3,0,nums1,0,nums3.length-1);
         for(int itr : nums1){
             System.out.println(nums1[itr]);
