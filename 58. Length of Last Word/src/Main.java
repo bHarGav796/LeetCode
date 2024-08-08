@@ -13,8 +13,9 @@ public class Main {
                     System.out.println(len);
                     break;
                 }
-            if(s.charAt(i)!=' ')
+            if(s.charAt(i)!=' ') {
                 len++;
+            }
 
         }
 
