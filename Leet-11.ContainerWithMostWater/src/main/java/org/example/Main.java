@@ -4,7 +4,7 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        int[] height = {1,8,6,2,5,4,8,3,7};
+        int[] height = {2,3,4,5,18,17,6};
 
         //1. Brute-force
 //        int upto = height.length -1, temp_ans = 0, result = 0;
@@ -18,6 +18,8 @@ public class Main {
 //
 //                    }
 //            }
+//        System.out.println(result);
+
         // 2. Efficient Solution
         int start = 0, end = height.length -1, temp_ans = 0, result = 0;
 
@@ -25,7 +27,7 @@ public class Main {
             temp_ans = Math.min(height[start], height[end]) * (end - start);
             if (temp_ans > result)
                 result = temp_ans;
-            if (start < end)
+            if (height[start] < height[end])
                 start++;
             else end--;
         }
